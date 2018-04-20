@@ -1,0 +1,35 @@
+$font: "HelveticaNeue-Light",
+"Helvetica Neue Light",
+"Helvetica Neue",
+Helvetica,
+Arial,
+"Lucida Grande",
+sans-serif;
+// Background Colors
+$headerSectionColor: #b0f086;
+// Section Heights
+$sectionHeight-small: 5vh;
+//Fonts
+$headerLarge: 65px;
+$headerMedium: 50px;
+$headerSmall: 35px;
+$paragraphLarge: 20px;
+//Font Colors
+$headerFontColor: #e8eeee;
+//Margins and Paddings
+@mixin inner-margins {
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+@mixin button-styles {
+    border: 1px solid #797979;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    cursor: pointer;
+    margin: 10px;
+}

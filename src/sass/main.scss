@@ -1,0 +1,324 @@
+/*
+    All of the styles in the app are written in SaaS. They are put into bundle.min.js using webpack.
+    To add a new scss file, you must add it to the entry line in the webpack.config.js file.
+*/
+
+@import "reset"; //Reset all default css by webpage
+@import "variables"; //all variables
+@import "defaults"; // default scss
+@import "table"; //React table scss
+.spacer {
+    width: 100%;
+    height: 65px;
+}
+
+.headerSection {
+    display: flex;
+    padding: 10px;
+    background: #28eba4;
+    position: fixed;
+    width: 100vw;
+    color: white;
+    z-index: 10;
+    a {
+        color: white;
+    }
+    .headerTitle {
+        font-size: 200%;
+        cursor: pointer;
+    }
+    .headerLinks {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 30px;
+        padding-top: 10px;
+        .headerLinksItem {
+            margin-left: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+            font-size: 115%;
+        }
+    }
+}
+
+.homeSection {
+    min-height: $sectionHeight-small;
+    background-color: $headerSectionColor;
+    background-size: cover;
+    color: $headerFontColor;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-attachment: scroll;
+    background-color: #03eca2;
+    background-size: fill;
+    h1 {
+        position: relative;
+        font-size: $headerLarge;
+        text-align: center;
+        vertical-align: middle;
+        top: 50%;
+    }
+    p {
+        font-size: 2vw;
+        text-align: center;
+    }
+    #title {
+        margin: auto;
+        padding-top: 50px;
+    }
+    #search-bar {
+        width: 50vw;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+.featuredSection {
+    width: 100%;
+    .featuredHeader {
+        height: 20vh;
+        text-align: center;
+        background: #454545;
+        color: white;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+        padding: 40px;
+        h1 {
+            font-size: $headerMedium;
+        }
+        p {
+            font-size: $paragraphLarge;
+        }
+    }
+    .featuredRow {
+        display: flex;
+        padding: 0px !important;
+        flex-wrap: wrap;
+         :hover {
+            color: #39f5b9;
+        }
+    }
+}
+
+.resultsSection {
+    width: 100vw;
+    padding-bottom: 20px;
+    .resultsHeader {
+        height: 15vh;
+        text-align: center;
+        color: black;
+        padding: 40px;
+        h1 {
+            font-size: 300%;
+        }
+    }
+    .resultsRow {
+        overflow-y: scroll;
+        height: 600px;
+    }
+}
+
+.categorySection {
+    height: 100%;
+    background: #03eca2;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2));
+    .categoryHeader {
+        height: 20vh;
+        text-align: center;
+        color: white;
+        padding: 40px;
+        h1 {
+            font-size: $headerMedium;
+        }
+        p {
+            font-size: $paragraphLarge;
+        }
+    }
+    .categoryRow {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+         :hover {
+            color: #39f5b9;
+        }
+        .categoryCard {
+            flex: 1 0 20%;
+            margin: 5px;
+            height: 100px;
+            max-width: 200px;
+            min-width: 200px;
+            cursor: pointer;
+        }
+        .categoryCard-info {
+            margin-top: 30px;
+            h1 {
+                font-size: $headerSmall;
+                text-align: center;
+            }
+            color: white;
+        }
+    }
+}
+
+.restaurantCard {
+    color: white;
+    height: 40vh;
+    width: calc(100% * (1/4) - 10px - 1px);
+    flex-grow: 1;
+    cursor: pointer;
+    .restaurantCard-info {
+        padding: 20px;
+        h1 {
+            font-size: $headerSmall;
+        }
+        p {
+            font-size: $paragraphLarge;
+        }
+    }
+}
+
+.restaurantListItem {
+    display: flex;
+    margin: auto;
+    background: #F1F1F1;
+    border: 2px solid #000000;
+    padding: 0px !important;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 150px;
+    cursor: pointer;
+    .imageSection {
+        text-align: center;
+        flex-grow: 1;
+        padding: 0px !important;
+        flex-wrap: wrap;
+        min-width: 200px;
+        max-width: 220px;
+    }
+    .nameTypeDesc {
+        flex-grow: 1;
+        padding-left: 5px;
+        min-width: 400px;
+        max-width: 400px;
+        .restoName {
+            font-size: 25px;
+        }
+        .restoType {
+            font-size: 17px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .Rating {
+        flex-grow: 1;
+    }
+}
+
+.restaurantSection {
+    background: #03eca2;
+    min-height: 100vh;
+    height: 100%;
+    .content {
+        margin-left: 15%;
+        margin-right: 15%;
+        background: white;
+        height: 100%;
+        min-height: 100vh;
+        .restaurantHeader {
+            height: 30vh;
+            position: relative;
+            .restaurantHeaderTitle {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                font-size: $headerMedium;
+                color: white;
+            }
+        }
+        .restaurantContent {
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            min-height: 100%;
+            .restaurantContentItem {
+                margin: 0 10px;
+                h1 {
+                    font-size: 35px;
+                }
+            }
+        }
+        .restaurantLocation {
+            min-height: 20vh;
+            height: 100%;
+            text-align: center;
+            .restaurantLocationHeader {
+                font-size: 30px;
+                padding-bottom: 10px;
+            }
+            .restaurantLocationList {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                padding: 10px;
+            }
+        }
+        .restaurantMenu {
+            .restaurantMenuHeader {
+                font-size: 30px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            .menuTable {
+                text-transform: capitalize;
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+.adminSection {
+    width: 100%;
+    background-color: #454545;
+    .react-bs-table-container {
+        background: #F1F1F1;
+        color: black !important;
+    }
+    .adminHeader {
+        height: 30vh;
+        text-align: center;
+        background: #28eba4;
+        color: #FFFFFF;
+        padding: 60px;
+        h1 {
+            font-size: $headerMedium;
+        }
+        p {
+            font-size: $paragraphLarge;
+        }
+    }
+    .adminQuerySection {
+        width: 50vw;
+        padding-top: 20px;
+        margin: auto;
+        color: white;
+        .queryHeader {
+            text-align: center;
+            font-size: 250%;
+            padding: 20px;
+        }
+    }
+    .adminRetrievedDataSection {
+        padding: 50px;
+    }
+}

@@ -11,7 +11,7 @@ Some screenshots of the final application:
 ![](screenshots/screenshot3.png)  ![](screenshots/screenshot4.png) 
 
 
-# More deatails
+# More details
 
 The project is called Munchies, a restaurant app. It is separated into 2 parts. The front end is in the munchies-react folder, a react app we made. And the back end is in the munchies-python folder which is a python app we made to act as our API. The API uses Flask to connect to Postgres server and query on our databases.
 
